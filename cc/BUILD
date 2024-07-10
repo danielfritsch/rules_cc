@@ -29,6 +29,7 @@ filegroup(
 exports_files([
     "defs.bzl",
     "action_names.bzl",
+    "cc_toolchain_config_lib.bzl",
     "system_library.bzl",
 ])
 
@@ -97,7 +98,7 @@ bzl_library(
 bzl_library(
     name = "cc_toolchain_config_lib_bzl",
     srcs = ["cc_toolchain_config_lib.bzl"],
-    visibility = ["//visibility:private"],
+    visibility = ["//visibility:public"],
 )
 
 cc_toolchain_alias(name = "current_cc_toolchain")
